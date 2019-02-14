@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>count</title>
+</head>
+<body>
+    <h1>Your text:</h1>
+    <p>{{text}}</p>
+    <a href="{% url 'index' %}">Start a new word count!</a>
+    <h1>Your text contains {{len}} words</h1>
+    <h3>WORD COUNT: </h3>
+    {% for word,occurence in wordcount %} 
+        <h4>{{ word }} - {{ occurence }}</h4>
+    {% endfor %}
+
+</body>
+</html>
